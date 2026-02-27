@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Duo Project</title>
+    <title>Blog</title>
+    <!------------CSS-------------->
     <link rel="stylesheet" href="css/style.css">
+    <!------------Font Awesome-------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!------------Google Fonts-------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monsieur+La+Doulaise&family=Pacifico&family=Pinyon+Script&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monsieur+La+Doulaise&family=Pacifico&family=Pinyon+Script&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
         <!-- Navigation -->
@@ -23,90 +26,54 @@
 
 
         <!-- Blog section -->
-    <div class="blog-title">
-        Marley’s Blogs
-    </div>
-
     <div class="blog-container">
 
-        <!-- Arrow Left -->
-        <div class="arrow" onclick="prevPost()">&#10094;</div>
+    <!-- Marley Blog -->
+    <div class="blog-section">
+        <div class="blog-title">Marley’s Blogs</div>
 
-        <!-- Blog Cards -->
-        <div class="cards-wrapper">
-
-            <div class="blog-card active">
-                <img src="https://via.placeholder.com/250x200" alt="">
-                <div class="blog-content">
-                    <small>21 Feb 2026 / Saturday</small>
-                    <h3>Saturday Class!</h3>
-                    <p class="text">
-                        Today, we had our 2 subjects done. It was a productive and meaningful class.
-                        We learned new concepts, shared ideas, and improved our skills throughout the session.
-                        It was challenging but very rewarding in the end.
-                    </p>
-                    <button onclick="toggleText(this)">Read More</button>
-                </div>
+        <div class="blog-card">
+            <div class="image">
+                <img src="assets/images/saturday.jpg" class="blog-img">
             </div>
 
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/250x200" alt="">
-                <div class="blog-content">
-                    <small>22 Feb 2026 / Sunday</small>
-                    <h3>Weekend Reflection</h3>
-                    <p class="text">
-                        Sunday was a peaceful day. I reflected on my goals and spent time planning
-                        for the upcoming week. Sometimes slowing down helps us grow stronger.
-                    </p>
-                    <button onclick="toggleText(this)">Read More</button>
-                </div>
+            <div class="card-content">
+                <small>21 Feb 2026 / Saturday</small>
+                <h2>Saturday Class!</h2>
+                <p>Today, we had our 2 subjects done...
+                </p>
             </div>
 
-            <div class="blog-card">
-                <img src="https://via.placeholder.com/250x200" alt="">
-                <div class="blog-content">
-                    <small>23 Feb 2026 / Monday</small>
-                    <h3>Back to Work</h3>
-                    <p class="text">
-                        Monday started with motivation and focus. I continued working on my projects,
-                        improving my coding skills, and staying determined to reach my goals.
-                    </p>
-                    <button onclick="toggleText(this)">Read More</button>
-                </div>
+            <div class="card-footer">
+                <a href="marley_blog.html">read more</a>
             </div>
-
         </div>
-
-        <!-- Arrow Right -->
-        <div class="arrow" onclick="nextPost()">&#10095;</div>
-
     </div>
 
-<script>
-let currentIndex = 0;
-const cards = document.querySelectorAll(".blog-card");
+    <!-- Shieanne Blog -->
+   <div class="blog-section">
+        <div class="blog-title">Shieanne’s Blogs</div>
 
-function showPost(index) {
-    cards.forEach(card => card.classList.remove("active"));
-    cards[index].classList.add("active");
-}
+        <div class="blog-card">
+            <div class="image">
+                <img src="assets/images/saturday.jpg" class="blog-img">
+            </div>
 
-function nextPost() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    showPost(currentIndex);
-}
+            <div class="card-content">
+                <small>21 Feb 2026 / Saturday</small>
+                <h2>Saturday Class!</h2>
+                <p>Today, we had our 2 subjects done...</p>
+            </div>
 
-function prevPost() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    showPost(currentIndex);
-}
+            <div class="card-footer">
+                <button>
+                <a href="#">  Read More  </a>
+                </button>
+            </div>
+        </div>
+    </div>
 
-function toggleText(button) {
-    const text = button.previousElementSibling;
-    text.classList.toggle("expanded");
-    button.innerText = text.classList.contains("expanded") ? "Show Less" : "Read More";
-}
-</script>
+</div>
 
 </body>
 </html>
