@@ -139,6 +139,7 @@ nav {
     box-shadow: 6px 6px 0 black;
     margin-bottom: 20px;
     font-weight: bold;
+    width: 50%;
 }
 
 .right-blog p {
